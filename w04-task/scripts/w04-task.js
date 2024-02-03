@@ -2,7 +2,7 @@
 
 /* Profile Object  */
 let myProfile = {
-    name: "Sadie Bybee",
+    name: " Sadie Bybee",
     photo: "images/photo.png",
     favoriteFoods: [
         'Chicken',
@@ -19,7 +19,7 @@ let myProfile = {
 };
 
 /* Populate Profile Object with placesLive objects */
-myProfile.placesLived[
+myProfile.placesLived = [
     {
         place: 'Farmington, UT',
         length: '19 years'
