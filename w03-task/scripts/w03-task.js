@@ -4,28 +4,28 @@
 /* Function Definition - Add Numbers */
 function add (number1, number2) {
     return number1 + number2;
-}
+};
 
-/* Function Expression - Subtract Numbers */
 function addNumbers(addNumber1, addNumber2) {
     let addNumber1 = Number(document.querySelector("#add1").value);
     let addNumber2 = Number(document.querySelector("#add2").value);
     return document.querySelector('#sum').value = add(addNumber1, addNumber2);
-}
+};
 
 document.querySelector('#addNumbers').addEventListener('click', addNumbers);
 
+/* Function Expression - Subtract Numbers */
 // subtraction
 const subtract = function (number1, number2) {
     return number1 - number2;
-}
+};
 
 const subtractNumbers = function () {
     let minuend = parseInt(document.querySelector("#minuend").value);
     let subtrahend = parseInt(document.querySelector("#subtrahend").value);
     let result = subtract(minuend, subtrahend);
     document.querySelector("#difference").value = result;
-}
+};
 
 document
 .querySelector("#subtractNumbers")
@@ -62,17 +62,33 @@ document
 .addEventListener("click", divideNumbers);
 
 /* Decision Structure */
+const subtotal = document.getElementById('subtotal');
+const member = document.getElementById("member");
+const getTotal = document.getElementById("getTotal");
+const total = document.getElementById("total");
 
+getTotal.addEventListener('click', calculateTotalDue);
 
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+
+document.querySelector("#array").textContent = numbers;
 
 /* Output Odds Only Array */
-
+document.querySelector("#odds").textContent = numbers.filter(
+    (number) => number % 2
+);
 /* Output Evens Only Array */
+document.querySelector("#evens").innerHTML = numbersArray.filter(number => number % 2 === 0);
 
 /* Output Sum of Org. Array */
+numbersArray.reduce((sum, number) => sum + number)
 
 /* Output Multiplied by 2 Array */
+numbersArray.map(number => number * 2)
 
 /* Output Sum of Multiplied by 2 Array */
+document.querySelector("#sumOfMultiplied").textContent = numbers
+.map((number) => number * 2)
+.reduce((sum, number) => sum + number, 0);
